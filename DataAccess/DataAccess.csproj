@@ -13,8 +13,4 @@
     <ProjectReference Include="..\FastDataAccess\Contract.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Implementation\" />
-  </ItemGroup>
-
 </Project>
