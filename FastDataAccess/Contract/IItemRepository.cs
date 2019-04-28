@@ -6,9 +6,11 @@ namespace FastDataAccess.Contract
     {
         void Add(Item item);
 
-        Item Get(int id);
+        Item GetById(int id);
 
-        Item GetByName(string name);
+        IEnumerable<Item> GetByName(string name);
+
+        IEnumerable<Item> GetByItemPath(ItemPath itemPath);
 
         IEnumerable<Item> GetAll();
 

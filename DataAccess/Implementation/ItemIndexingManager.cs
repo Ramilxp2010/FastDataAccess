@@ -17,9 +17,13 @@ namespace DataAccess.Implementation
             ItemPathRepository = itemPathRepository;
         }
 
-        public void SaveItemInfo(FileInfo fileInfo)
+        public void SaveItem(FileInfo fileInfo)
         {
-            
+            var item = ItemRepository.GetByName(fileInfo.Name);
+            if (item != null)
+            {
+                ItemPathRepository.Update(new ItemPath());
+            }
         }
     }
 }

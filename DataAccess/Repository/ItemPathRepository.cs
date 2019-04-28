@@ -24,17 +24,17 @@ namespace DataAccess.Repository
         }
 
         /// <summary>
-        /// Get item path by item path id
+        /// GetById item path by item path id
         /// </summary>
         /// <param name="id"></param>
         /// <returns>ItemPath or null</returns>
-        public ItemPath Get(int id)
+        public ItemPath GetById(int id)
         {
             return dbContext.ItemPaths.FirstOrDefault(x => x.Id == id);
         }
 
         /// <summary>
-        /// Get item path by path
+        /// GetById item path by path
         /// </summary>
         /// <param name="path"></param>
         /// <returns>ItemPath or null</returns>
@@ -44,7 +44,7 @@ namespace DataAccess.Repository
         }
 
         /// <summary>
-        /// Get item path by item
+        /// GetById item path by item
         /// </summary>
         /// <param name="item"></param>
         /// <returns>ItemPath list</returns>
@@ -59,7 +59,7 @@ namespace DataAccess.Repository
         /// <param name="itemPath"></param>
         public void Update(ItemPath itemPath)
         {
-            var oldItem = Get(itemPath.Id);
+            var oldItem = GetById(itemPath.Id);
             if (oldItem == null)
             {
                 return;

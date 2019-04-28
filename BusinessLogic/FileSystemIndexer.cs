@@ -25,7 +25,6 @@ namespace BusinessLogic
         {
             foreach (var file in directory.GetFiles())
             {
-                ItemPathRepository
             }
         }
     }

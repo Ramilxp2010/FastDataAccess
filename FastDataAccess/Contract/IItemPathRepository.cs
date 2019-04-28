@@ -6,7 +6,7 @@ namespace FastDataAccess.Contract
     {
         void Add(ItemPath itemPath);
 
-        ItemPath Get(int id);
+        ItemPath GetById(int id);
 
         ItemPath GetByPath(string path);
 
